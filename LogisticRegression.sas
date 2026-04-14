@@ -71,11 +71,13 @@ proc surveylogistic data=mydata.nhanes_scored;
           BPQ020
           / expb;
 run;
-*SXQ294, DUQ250, SXQ292, and LBXGLU dropped from regression; 
+* Vars SXQ294, DUQ250, SXQ292, and LBXGLU dropped from regression; 
+* Returns a quasi-complete separation warning, which is a consequence of having only 34 HIV positive cases. 
+* Solution: Reduce the model further to just factor scores, removing all the binary covariates gives the model the best chance of stable estimation
 
 *--------------------------------------------------------------------------------------;
 * Logistic Regression;
-* JUST factor scores, no categorical covariates;
+* JUST factor scores, no binary/categorical covariates;
 *--------------------------------------------------------------------------------------;
 proc surveylogistic data=mydata.nhanes_scored;
     stratum SDMVSTRA;
