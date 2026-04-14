@@ -41,7 +41,7 @@ followed by weighted logistic regression.
 | 4 | Socioeconomic Status | Income-to-Poverty Ratio, Height |
 | 5 | Alcohol Consumption | Avg Drinks Per Day |
 
-### Stage 2 — Logistic Regression (SAS)
+### Stage 2 — Logistic Regression (SAS) **TBD**
 - `PROC SURVEYLOGISTIC` used to account for complex survey design
 - Factor scores entered as continuous predictors
 - Final analytic sample: 1,841 participants (16 HIV positive cases)
