@@ -14,7 +14,7 @@ proc import datafile="/home/u62932621/Multivariate/FinalProject/nhanes_analytic.
 run;
 
 *--------------------------------------------------------------------------------------;
-* Normality check — informs choice of extraction method;
+* Normality check
 *--------------------------------------------------------------------------------------;
 proc univariate data=work.nhanes_analytic normal;
     var RIDAGEYR INDFMPIR BMXBMI BMXWT BMXHT
@@ -23,7 +23,7 @@ proc univariate data=work.nhanes_analytic normal;
 run;
 
 *--------------------------------------------------------------------------------------;
-* Define variable list as macro for reuse — avoids repeating across every step;
+* Define variable list as macro
 *--------------------------------------------------------------------------------------;
 %let factvars = RIDAGEYR INDFMPIR BMXBMI BMXWT BMXHT
                 LBXGH LBDHDD LBDLDL PAD680
